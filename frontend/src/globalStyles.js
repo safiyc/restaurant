@@ -4,12 +4,18 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
 
-  * {
-    font-family: 'Lato', sans-serif;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-  h1, h2, h3, h4, h5, h6 {
+html {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather Sans', sans-serif;
   }
 `;
+
 export default GlobalStyle;
