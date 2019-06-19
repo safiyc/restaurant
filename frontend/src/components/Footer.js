@@ -4,23 +4,21 @@ import styled from 'styled-components';
 import { color, above } from '../util';
 
 const StyledFooter = styled.footer`
-  display: grid;
-  grid-template-columns: 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr; */
 
   background: ${color.black};
   color: ${color.gray};
-  /* height: 200px; */
   width: 100vw;
 
   ${above.med`
-    grid-template-columns: repeat(4,1fr);
-    color: red;
+    grid-template-columns: 20vw 20vw 30vw 30vw;
   `}
-
-  const styledLi {
-    color: ${color.yellow};
-  }
 `;
+
+const FooterContent = styled.div`
+  grid-column: 1 / -1;
+`
 
 const Column = styled.div`
   width: auto;
@@ -33,6 +31,7 @@ const Styledh4 = styled.h4`
 const Footer = () => {
   return (
     <StyledFooter>
+      <FooterContent>
       <Column>
         <Styledh4>Sitemap</Styledh4>
         <ul>
@@ -67,6 +66,7 @@ const Footer = () => {
           malesuada fames ac turpis velit, rhoncus eu.
         </p>
       </Column>
+      </FooterContent>
     </StyledFooter>
   );
 };
