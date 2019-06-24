@@ -2,7 +2,7 @@
   "name": "restaurant-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/loader.js",
+  "main": "loader.js",
   "scripts": {
     "start": "nodemon",
     "production": "pm2 start loader.js --name restaurant-backend"
