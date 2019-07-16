@@ -6,15 +6,15 @@ import Footer from './Footer';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1.5rem auto 1.5rem;
+  // grid-template-columns: 1.5rem auto 1.5rem;
 `
 
 export default function Layout(props) {
   return (
-      <Wrapper>
-        <Header />
-        {props.children}
-        <Footer />
-      </Wrapper>
+    <Wrapper>
+      <Header />
+      {props.children}
+      <Footer />
+    </Wrapper>
   );
 }
