@@ -13,8 +13,8 @@ function App() {
       <GlobalStyles />
       <Layout>
         <Section name="About" />
-        <Section name="mini-menu"/>
-        <Section name="Testimonials"/>
+        <Section name="mini-menu" />
+        <Section name="Testimonials" />
         <Contact />
       </Layout>
     </>
