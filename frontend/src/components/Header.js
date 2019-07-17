@@ -12,11 +12,12 @@ import phoneIcon from '../asset/img/phone_icon.png';
 import peopleDining from '../asset/img/people_dining.png';
 import imgBehind from '../asset/img/img_behind.png';
 
+import { color } from '../util'
+
 const HeaderContainer = styled.div`
   display: flex;
   width: 100%;
   height: 500px;
-  font-family: aerial;
   font-size: 16px;
 `;
 
@@ -25,15 +26,17 @@ const LeftContent = styled.div`
   min-width: 250px;
 
   // helper
-  // border: 1px dotted yellow;
+  // border: 1px dotted ${color.yellow};
   // background-color: rgba(0,0,0,.25);
 `;
 
 const RightContent = styled.div`
   width: 65%;
 
-  // helper
-  // border: 1px dotted black;
+  /*
+  helper
+  border: 1px dotted black;
+  */
 `;
 
 const Logo = styled.div`
@@ -65,18 +68,20 @@ const LinksList = styled.li`
   display: flex;
   align-items: center;
 
-  & > div {
+  & > h4 {
     min-width: ${props => props.widthBM ? '180px' : '135px'};
+    margin: 3px 0;
   }
 
-  // please change 'a' to 'Link'
-  & > div > a {
+  // TODO: please change 'a' to 'Link'
+  & > h4 > a {
     color: black;
+    color: ${color.black};
     text-decoration: none;
   }
 
-  & > div > a:hover {
-    color: gold;
+  & > h4 > a:hover {
+    color: ${color.yellow};
   }
 `;
 
@@ -124,7 +129,6 @@ const HoursPhone = styled.ul`
   justify-content: center;
   list-style: none;
   margin: 10px 0 20px;
-  font-family: sans-serif;
   font-size: .8rem;
   color: grey;
 `;
@@ -173,7 +177,7 @@ const Button = styled.button`
   left: 60px;
   z-index: 10;
 
-  background-color: gold;
+  background-color: ${color.yellow};
   border: none;
   width: 110px;
   height: 30px;
@@ -186,7 +190,7 @@ const Button = styled.button`
   }
 `;
 
-const ImgText = styled.p`
+const ImgText = styled.h2`
   position: absolute;
   top: 170px;
   left: 60px;
@@ -197,12 +201,11 @@ const ImgText = styled.p`
   text-shadow: 0 0 2px black;
 
   & > .txt_gold {
-    color: gold;
+    color: ${color.yellow};
   }
 
   & > .txt_sub {
     font-size: 1rem;
-    font-family: sans-serif;
     text-shadow: none;
     display: block;
     margin-top: 5px;
@@ -217,7 +220,7 @@ const ImgGradient = styled.div`
   height: 100%;
   z-index: 1;
   background-image: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%,
-  rgba(0,0,0,.75) 100%); 
+  rgba(0,0,0,.75) 100%);
 `;
 
 const ImgMain = styled.img`
@@ -256,12 +259,14 @@ const Header = () => {
       <LeftContent>
         <Logo />
         <NavSection>
-          <LinksList><div><HomeIcon /><a href="www.placeholder.com">Home</a></div><HR /></LinksList>
-          <LinksList><div><MenuIcon /><a href="www.placeholder.com">Menu</a></div><HR /></LinksList>
-          <LinksList><div><PartiesIcon /><a href="www.placeholder.com">Parties</a></div><HR /></LinksList>
-          <LinksList widthBM><div><BusinessIcon /><a href="www.placeholder.com">Business Meetings</a></div><HR /></LinksList>
-          <LinksList><div><CateringIcon /><a href="www.placeholder.com">Catering</a></div><HR /></LinksList>
-          <LinksList><div><ContactIcon /><a href="www.placeholder.com">Contact</a></div><HR /></LinksList>
+          <LinksList>
+            <h4>
+              <HomeIcon /><a href="www.placeholder.com">Home</a></h4><HR /></LinksList>
+          <LinksList><h4><MenuIcon /><a href="www.placeholder.com">Menu</a></h4><HR /></LinksList>
+          <LinksList><h4><PartiesIcon /><a href="www.placeholder.com">Parties</a></h4><HR /></LinksList>
+          <LinksList widthBM><h4><BusinessIcon /><a href="www.placeholder.com">Business Meetings</a></h4><HR /></LinksList>
+          <LinksList><h4><CateringIcon /><a href="www.placeholder.com">Catering</a></h4><HR /></LinksList>
+          <LinksList><h4><ContactIcon /><a href="www.placeholder.com">Contact</a></h4><HR /></LinksList>
         </NavSection>
       </LeftContent>
       <RightContent>
