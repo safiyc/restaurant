@@ -1,8 +1,8 @@
-import { styledNormalize } from 'styled-normalize';
+import { StyledNormalize } from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  ${styledNormalize}
+  ${StyledNormalize}
 
 *, *:before, *:after {
   box-sizing: inherit;
