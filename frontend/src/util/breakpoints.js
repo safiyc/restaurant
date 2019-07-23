@@ -24,3 +24,12 @@ export const above = Object.keys(size).reduce((acc, label) => {
 //   `;
 //   return acc;
 // }, {});
+
+// Side Margins
+export const SideMargins = css`
+  margin: 0 1vw;
+
+  ${above.large`
+    margin: 0 5vw;
+  `}
+`;
