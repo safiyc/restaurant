@@ -1,5 +1,5 @@
 import React from 'react';
-import { styledNormalize } from 'styled-normalize';
+import { Normalize } from 'styled-normalize';
 import GlobalStyles from './globalStyles';
 
 import Layout from './components/Layout';
@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <>
-      <styledNormalize />
+      <Normalize />
       <GlobalStyles />
       <Layout>
         <Section name="About" />

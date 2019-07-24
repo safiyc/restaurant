@@ -7,16 +7,9 @@ import Footer from './Footer';
 import { above } from '../util';  // test
 
 const Wrapper = styled.div`
-  /* display: grid;
-  grid-template-columns: 1.5rem auto 1.5rem; */
-
-  /* test */
-  /* ${above.med`
-    border: 4px solid yellow;
-  `}
-  border: 2px dashed green; */
-  /* end test */
-`;
+  display: grid;
+  /* grid-template-columns: 1.5rem auto 1.5rem; */
+`
 
 export default function Layout(props) {
   return (

@@ -2,7 +2,8 @@ import { css } from 'styled-components';
 
 const size = {
   small: 400,
-  med: 960,
+  // med: 960,
+  med: 760,
   large: 1140
 };
 
@@ -24,3 +25,13 @@ export const above = Object.keys(size).reduce((acc, label) => {
 //   `;
 //   return acc;
 // }, {});
+
+// Side Margins
+export const SideMargins = css`
+  margin: 0 1vw;
+
+  ${above.large`
+    margin-left:5vw;
+    margin-right:5vw;
+  `}
+`;
