@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 1.6rem; //16px
+    margin: 0 auto;
+    height: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,7 +26,6 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
-  }
 
   li {
     list-style-type: none;

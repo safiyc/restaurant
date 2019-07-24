@@ -18,6 +18,7 @@ const FooterContent = styled.div`
   ${SideMargins}
   margin: 1rem 0 2rem 0;
 
+
   ${above.med`
     grid-template-columns: 20vw 20vw 30vw 30vw;
     margin: 3.7rem 0 6.4rem 0;
@@ -78,6 +79,7 @@ const Footer = () => {
           </ul>
         </SiteMap>
         <Links>
+
           <Styledh4>Links</Styledh4>
           <li>Contact</li>
           <li>Partnership</li>
@@ -93,12 +95,14 @@ const Footer = () => {
         </Subscribe>
 
         <Follow>
+
           <Styledh4>Follow Us</Styledh4>
           <p>
             Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
             malesuada fames ac turpis velit, rhoncus eu.
           </p>
         </Follow>
+
       </FooterContent>
     </StyledFooter>
   );
