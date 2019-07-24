@@ -1,4 +1,3 @@
-// import { StyledNormalize } from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -21,15 +20,16 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
-    }
+  }
 
   a {
     color: inherit;
     text-decoration: none;
+  }
 
   li {
     list-style-type: none;
   }
-  `;
+`;
 
 export default GlobalStyle;

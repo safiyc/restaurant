@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Button from './Button';
+import { ImgsContainer, ImgText, ImgGradient, ImgMain, ImgBg, ImgBehind } from '../elements/ImgBanner';
+import Button from '../elements/Button';
 import logo from '../asset/img/logo.PNG';
 import menuExpandIcon from '../asset/img/menu_expand.png';
 import homeIcon from '../asset/img/home_icon.PNG';
@@ -20,10 +21,9 @@ import { color } from '../util';
 const HeaderContainer = styled.div`
   width: 100%;
   height: 500px;
-  font-size: 16px;
   display: grid;
   grid-template-rows: 100px auto;
-  grid-template-columns: 250px auto; // 250px auto
+  grid-template-columns: 250px auto;
   grid-auto-flow: column;
   margin-bottom: 30px;
 
@@ -59,7 +59,7 @@ const HoursPhone = styled.ul`
   justify-content: center;
   list-style: none;
   margin: 10px 0 25px;
-  font-size: .8rem;
+  font-size: 1.2rem;
   color: grey;
   height: 25px;
   order: 3;
@@ -147,9 +147,6 @@ const NavSection = styled.div`
   padding-left: 5px;
   order: 2;
 
-  /* max-width: 300px;
-  min-width: 250px; */
-
   @media (max-width: 600px) {
     grid-area: navsection;
     justify-self: end;
@@ -205,7 +202,7 @@ const MenuExpandIcon = styled.span`
 const LinksList = styled.div`
   margin: 3px 0;
   text-transform: uppercase;
-  font-size: .7rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 30px;
   white-space: nowrap;
@@ -245,13 +242,13 @@ const NavIcons = styled.span`
   }
 `;
 
-const HR = styled.hr`
+const HR = styled.div`
   width: 100%;
-  height: 1px;
-  border: .005rem solid #efefef;
+  border-top: .1rem solid #efefef;
 
   @media (max-width: 600px) {
     display: none;
+    border-top: none;
   }
 `;
 
@@ -280,34 +277,20 @@ const ContactIcon = styled(NavIcons)`
 `;
 // #endregion
 
-// #region ImgContainer
-const ImgsContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 360px;
-  margin-top: -40px;
+// #region HeaderImgContainer
+const HeaderImgContainer = styled(ImgsContainer)`
   order: 4;
 
   @media (max-width: 600px) {
     grid-area: imgscontainer;
-    margin-top: -30px;
-    text-align: center;
   }
 `;
 
-const Button = styled.button`
+const HeaderButton = styled(Button)`
   position: absolute;
-  top: 285px;
+  top: 275px;
   left: 60px;
-  z-index: 10;
-
-  background-color: ${color.yellow};
-  border: none;
-  width: 110px;
-  height: 30px;
-  text-transform: uppercase;
-  font-size: .6rem;
-  font-weight: 600;
+  z-index: 100;
 
   @media (max-width: 600px) { 
     left: 0;
@@ -318,85 +301,6 @@ const Button = styled.button`
 
   &:hover {
     color: white;
-  }
-`;
-
-const ImgText = styled.h2`
-  position: absolute;
-  top: 170px;
-  left: 60px;
-  z-index: 10;
-  color: white;
-  font-size: 2rem;
-  text-shadow: 0 0 2px black;
-  font-weight: 600;
-
-  & > .txt_gold {
-    color: ${color.yellow};
-  }
-
-  & > .txt_sub {
-    font-size: 1rem;
-    display: block;
-    margin-top: 5px;
-    font-weight: 100;
-  }
-
-  @media (max-width: 600px) {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.8rem !important;
-  }
-`;
-
-const ImgGradient = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-image: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%,
-  rgba(0,0,0,.75) 100%);
-`;
-
-const ImgMain = styled.img`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-`;
-
-const ImgBg = styled.div`
-  position: absolute;
-  top: -12px;
-  right: 0;
-  width: calc(100% - 60px);
-  height: 384px;
-  z-index: -1;
-  background-color: ${color.yellow};
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-`;
-
-const ImgBehind = styled.img`
-  position: absolute;
-  bottom: -68px;
-  left: -160px;
-  width: 260px;
-  z-index: -5;
-  object-fit: cover;
-  object-position: center;
-
-  @media (max-width: 600px) {
-    display: none;
   }
 `;
 // #endregion
@@ -420,18 +324,18 @@ const Header = () => {
         <HoursPhoneList><HoursIcon /><span className="hrs_contact_label">Opening Hours: </span><span className="hrs_contact_number">11:00 - 11:00 pm</span></HoursPhoneList>
         <HoursPhoneList><PhoneIcon /><span className="hrs_contact_label">Contact: </span><span className="hrs_contact_number">+1(832)000-0000</span></HoursPhoneList>
       </HoursPhone>
-      <ImgsContainer>
+      <HeaderImgContainer>
         <ImgGradient />
         <ImgText>
           There Are <span className="txt_gold">1000</span> Reasons
             <br />
           <span className="txt_sub">Why You Should Visit Us.</span>
         </ImgText>
-        <Button>Reserve A Table</Button>
+        <HeaderButton>Reserve A Table</HeaderButton>
         <ImgMain src={peopleDining} />
         <ImgBg />
         <ImgBehind src={imgBehind} />
-      </ImgsContainer>
+      </HeaderImgContainer>
     </HeaderContainer>
   );
 }
