@@ -13,6 +13,13 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+/* test */
+body,
+html {
+	margin: 0 auto;
+  height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', serif;
   }

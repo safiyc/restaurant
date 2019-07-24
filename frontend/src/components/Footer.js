@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 
   background: ${color.black};
   color: ${color.gray};
-  width: 100vw;
+  width: 100%;
 
   ${above.med`
     grid-template-columns: 20vw 20vw 30vw 30vw;
@@ -32,40 +32,40 @@ const Footer = () => {
   return (
     <StyledFooter>
       <FooterContent>
-      <Column>
-        <Styledh4>Sitemap</Styledh4>
-        <ul>
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Parties</li>
-          <li>Business</li>
-          <li>Meetings</li>
-          <li>Catering</li>
-          <li>Gallery</li>
-        </ul>
-      </Column>
-      <Column>
-        <Styledh4>Links</Styledh4>
-        <li>Contact</li>
-        <li>Partnership</li>
-        <li>Sales</li>
-      </Column>
+        <Column>
+          <Styledh4>Sitemap</Styledh4>
+          <ul>
+            <li>Home</li>
+            <li>Menu</li>
+            <li>Parties</li>
+            <li>Business</li>
+            <li>Meetings</li>
+            <li>Catering</li>
+            <li>Gallery</li>
+          </ul>
+        </Column>
+        <Column>
+          <Styledh4>Links</Styledh4>
+          <li>Contact</li>
+          <li>Partnership</li>
+          <li>Sales</li>
+        </Column>
 
-      <Column>
-        <Styledh4>Subscribe GrillMaster</Styledh4>
-        <p>
-          Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
-          malesuada fames ac turpis velit, rhoncus eu.
+        <Column>
+          <Styledh4>Subscribe GrillMaster</Styledh4>
+          <p>
+            Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
+            malesuada fames ac turpis velit, rhoncus eu.
         </p>
-      </Column>
+        </Column>
 
-      <Column>
-        <Styledh4>Follow Us</Styledh4>
-        <p>
-          Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
-          malesuada fames ac turpis velit, rhoncus eu.
+        <Column>
+          <Styledh4>Follow Us</Styledh4>
+          <p>
+            Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
+            malesuada fames ac turpis velit, rhoncus eu.
         </p>
-      </Column>
+        </Column>
       </FooterContent>
     </StyledFooter>
   );
