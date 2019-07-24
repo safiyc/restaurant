@@ -2,7 +2,8 @@ import { css } from 'styled-components';
 
 const size = {
   small: 400,
-  med: 960,
+  // med: 960,
+  med: 760,
   large: 1140
 };
 
@@ -30,6 +31,7 @@ export const SideMargins = css`
   margin: 0 1vw;
 
   ${above.large`
-    margin: 0 5vw;
+    margin-left:5vw;
+    margin-right:5vw;
   `}
 `;
