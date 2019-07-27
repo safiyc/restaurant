@@ -1,18 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Button from './Button';
-import logo from '../asset/img/logo.PNG';
-import menuExpandIcon from '../asset/img/menu_expand.png';
-import homeIcon from '../asset/img/home_icon.PNG';
-import menuIcon from '../asset/img/menu_icon.png';
-import partiesIcon from '../asset/img/parties_icon.png';
-import businessIcon from '../asset/img/business_meetings.png';
-import cateringIcon from '../asset/img/catering_icon.png';
-import contactIcon from '../asset/img/contact_icon.png';
-import hoursIcon from '../asset/img/hours_icon.png';
-import phoneIcon from '../asset/img/phone_icon.png';
-import peopleDining from '../asset/img/people_dining.png';
-import imgBehind from '../asset/img/img_behind.png';
+import Button from './elements/Button';
+import { logo, menuExpandIcon, homeIcon, menuIcon, partiesIcon, businessIcon, cateringIcon, contactIcon, hoursIcon, phoneIcon, peopleDining, imgBehind} from '../asset/img';
 
 import { color } from '../util';
 
