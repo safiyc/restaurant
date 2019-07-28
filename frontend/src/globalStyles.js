@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  li {
+  ul {
     list-style-type: none;
   }
 `;

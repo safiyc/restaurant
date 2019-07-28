@@ -1,8 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ImgsContainer, ImgText, ImgGradient, ImgMain, ImgBg, ImgBehind } from '../elements/ImgBanner';
+
+import {
+  ImgsContainer,
+  ImgText,
+  ImgGradient,
+  ImgMain,
+  ImgBg,
+  ImgBehind
+} from '../elements/ImgBanner';
+
 import Button from '../elements/Button';
-import { logo, menuExpandIcon, homeIcon, menuIcon, partiesIcon, businessIcon, cateringIcon, contactIcon, hoursIcon, phoneIcon, peopleDining, imgBehind} from '../asset/img';
+
+import {
+  logo,
+  menuExpandIcon,
+  homeIcon,
+  menuIcon,
+  partiesIcon,
+  businessIcon,
+  cateringIcon,
+  contactIcon,
+  hoursIcon,
+  phoneIcon,
+  peopleDining,
+  imgBehind
+} from '../asset/img';
+
 
 import { color } from '../util';
 
@@ -19,8 +43,8 @@ const HeaderContainer = styled.div`
   @media (max-width: 600px) {
     grid-template-columns: auto auto auto;
     grid-template-areas:
-    "logo hoursphone navsection"
-    "imgscontainer imgscontainer imgscontainer";
+      'logo hoursphone navsection'
+      'imgscontainer imgscontainer imgscontainer';
   }
 `;
 // #endregion
@@ -74,7 +98,7 @@ const HoursPhoneList = styled.li`
     font-weight: 600;
   }
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     padding: 0;
 
     & > .hrs_contact_label {
@@ -91,7 +115,7 @@ const HoursPhoneList = styled.li`
   &:not(last-child):first-child {
     border-right: 1px dashed #efefef;
 
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       border-right: none;
       padding-right: 10px;
     }
@@ -107,7 +131,7 @@ const HoursPhoneIcons = styled.div`
   vertical-align: middle;
   margin-right: 5px;
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 20px;
   }
 `;
@@ -115,7 +139,7 @@ const HoursPhoneIcons = styled.div`
 const HoursIcon = styled(HoursPhoneIcons)`
   background-image: url(${hoursIcon});
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 18px;
   }
 `;
@@ -123,7 +147,7 @@ const HoursIcon = styled(HoursPhoneIcons)`
 const PhoneIcon = styled(HoursPhoneIcons)`
   background-image: url(${phoneIcon});
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 23px;
     margin-left: -4px;
   }
@@ -161,8 +185,8 @@ const NavLinks = styled.div`
     position: absolute;
     right: -10px;
     width: 130px;
-    background-color: rgba(255,255,255,.75);
-    box-shadow: 0 0 2px 0 rgba(0,0,0,.5);
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
     z-index: 100;
 
     & div {
@@ -199,7 +223,7 @@ const LinksList = styled.div`
   align-items: center;
 
   & > h4 {
-    min-width: ${props => props.widthBM ? '185px' : '135px'};
+    min-width: ${props => (props.widthBM ? '185px' : '135px')};
     margin: 0;
 
     @media (max-width: 600px) {
@@ -224,7 +248,7 @@ const NavIcons = styled.span`
   display: inline-block;
   vertical-align: middle;
   margin-right: 12px;
-  transform: scale(.85);
+  transform: scale(0.85);
 
   @media (max-width: 600px) {
     display: none;
@@ -233,7 +257,7 @@ const NavIcons = styled.span`
 
 const HR = styled.div`
   width: 100%;
-  border-top: .1rem solid #efefef;
+  border-top: 0.1rem solid #efefef;
 
   @media (max-width: 600px) {
     display: none;
@@ -281,7 +305,7 @@ const HeaderButton = styled(Button)`
   left: 60px;
   z-index: 100;
 
-  @media (max-width: 600px) { 
+  @media (max-width: 600px) {
     left: 0;
     right: 0;
     margin-left: auto;
@@ -301,23 +325,67 @@ const Header = () => {
       <NavSection>
         <MenuExpandIcon />
         <NavLinks>
-          <LinksList><h4><HomeIcon /><a href="www.placeholder.com">Home</a></h4><HR /></LinksList>
-          <LinksList><h4><MenuIcon /><a href="www.placeholder.com">Menu</a></h4><HR /></LinksList>
-          <LinksList><h4><PartiesIcon /><a href="www.placeholder.com">Parties</a></h4><HR /></LinksList>
-          <LinksList widthBM><h4><BusinessIcon /><a href="www.placeholder.com">Business Meetings</a></h4><HR /></LinksList>
-          <LinksList><h4><CateringIcon /><a href="www.placeholder.com">Catering</a></h4><HR /></LinksList>
-          <LinksList><h4><ContactIcon /><a href="www.placeholder.com">Contact</a></h4><HR /></LinksList>
+          <LinksList>
+            <h4>
+              <HomeIcon />
+              <a href="www.placeholder.com">Home</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <MenuIcon />
+              <a href="www.placeholder.com">Menu</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <PartiesIcon />
+              <a href="www.placeholder.com">Parties</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList widthBM>
+            <h4>
+              <BusinessIcon />
+              <a href="www.placeholder.com">Business Meetings</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <CateringIcon />
+              <a href="www.placeholder.com">Catering</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <ContactIcon />
+              <a href="www.placeholder.com">Contact</a>
+            </h4>
+            <HR />
+          </LinksList>
         </NavLinks>
       </NavSection>
       <HoursPhone>
-        <HoursPhoneList><HoursIcon /><span className="hrs_contact_label">Opening Hours: </span><span className="hrs_contact_number">11:00 - 11:00 pm</span></HoursPhoneList>
-        <HoursPhoneList><PhoneIcon /><span className="hrs_contact_label">Contact: </span><span className="hrs_contact_number">+1(832)000-0000</span></HoursPhoneList>
+        <HoursPhoneList>
+          <HoursIcon />
+          <span className="hrs_contact_label">Opening Hours: </span>
+          <span className="hrs_contact_number">11:00 - 11:00 pm</span>
+        </HoursPhoneList>
+        <HoursPhoneList>
+          <PhoneIcon />
+          <span className="hrs_contact_label">Contact: </span>
+          <span className="hrs_contact_number">+1(832)000-0000</span>
+        </HoursPhoneList>
       </HoursPhone>
       <HeaderImgContainer>
         <ImgGradient />
         <ImgText>
           There Are <span className="txt_gold">1000</span> Reasons
-            <br />
+          <br />
           <span className="txt_sub">Why You Should Visit Us.</span>
         </ImgText>
         <HeaderButton>Reserve A Table</HeaderButton>
@@ -327,6 +395,6 @@ const Header = () => {
       </HeaderImgContainer>
     </HeaderContainer>
   );
-}
+};
 
 export default Header;
