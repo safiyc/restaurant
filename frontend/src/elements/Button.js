@@ -1,6 +1,6 @@
 // import React from 'react';
 import styled from 'styled-components';
-import { color } from '../../util';
+import { color } from '../util';
 
 const Button = styled.button`
   background-color: ${color.yellow};
