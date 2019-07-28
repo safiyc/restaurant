@@ -1,7 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './elements/Button';
-import { logo, menuExpandIcon, homeIcon, menuIcon, partiesIcon, businessIcon, cateringIcon, contactIcon, hoursIcon, phoneIcon, peopleDining, imgBehind} from '../asset/img';
+import {
+  ImgsContainer,
+  ImgText,
+  ImgGradient,
+  ImgMain,
+  ImgBg,
+  ImgBehind
+} from '../elements/ImgBanner';
+import Button from '../elements/Button';
+import {
+  logo,
+  menuExpandIcon,
+  homeIcon,
+  menuIcon,
+  partiesIcon,
+  businessIcon,
+  cateringIcon,
+  contactIcon,
+  hoursIcon,
+  phoneIcon,
+  peopleDining,
+  imgBehind
+} from '../asset/img';
 
 import { color } from '../util';
 
@@ -9,18 +30,17 @@ import { color } from '../util';
 const HeaderContainer = styled.div`
   width: 100%;
   height: 500px;
-  font-size: 16px;
   display: grid;
   grid-template-rows: 100px auto;
-  grid-template-columns: 250px auto; // 250px auto
+  grid-template-columns: 250px auto;
   grid-auto-flow: column;
   margin-bottom: 30px;
 
   @media (max-width: 600px) {
     grid-template-columns: auto auto auto;
     grid-template-areas:
-    "logo hoursphone navsection"
-    "imgscontainer imgscontainer imgscontainer";
+      'logo hoursphone navsection'
+      'imgscontainer imgscontainer imgscontainer';
   }
 `;
 // #endregion
@@ -48,7 +68,7 @@ const HoursPhone = styled.ul`
   justify-content: center;
   list-style: none;
   margin: 10px 0 25px;
-  font-size: .8rem;
+  font-size: 1.2rem;
   color: grey;
   height: 25px;
   order: 3;
@@ -74,7 +94,7 @@ const HoursPhoneList = styled.li`
     font-weight: 600;
   }
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     padding: 0;
 
     & > .hrs_contact_label {
@@ -91,7 +111,7 @@ const HoursPhoneList = styled.li`
   &:not(last-child):first-child {
     border-right: 1px dashed #efefef;
 
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       border-right: none;
       padding-right: 10px;
     }
@@ -107,7 +127,7 @@ const HoursPhoneIcons = styled.div`
   vertical-align: middle;
   margin-right: 5px;
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 20px;
   }
 `;
@@ -115,7 +135,7 @@ const HoursPhoneIcons = styled.div`
 const HoursIcon = styled(HoursPhoneIcons)`
   background-image: url(${hoursIcon});
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 18px;
   }
 `;
@@ -123,7 +143,7 @@ const HoursIcon = styled(HoursPhoneIcons)`
 const PhoneIcon = styled(HoursPhoneIcons)`
   background-image: url(${phoneIcon});
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 23px;
     margin-left: -4px;
   }
@@ -135,9 +155,6 @@ const NavSection = styled.div`
   list-style: none;
   padding-left: 5px;
   order: 2;
-
-  /* max-width: 300px;
-  min-width: 250px; */
 
   @media (max-width: 600px) {
     grid-area: navsection;
@@ -164,8 +181,8 @@ const NavLinks = styled.div`
     position: absolute;
     right: -10px;
     width: 130px;
-    background-color: rgba(255,255,255,.75);
-    box-shadow: 0 0 2px 0 rgba(0,0,0,.5);
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
     z-index: 100;
 
     & div {
@@ -194,7 +211,7 @@ const MenuExpandIcon = styled.span`
 const LinksList = styled.div`
   margin: 3px 0;
   text-transform: uppercase;
-  font-size: .7rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 30px;
   white-space: nowrap;
@@ -202,7 +219,7 @@ const LinksList = styled.div`
   align-items: center;
 
   & > h4 {
-    min-width: ${props => props.widthBM ? '185px' : '135px'};
+    min-width: ${props => (props.widthBM ? '185px' : '135px')};
     margin: 0;
 
     @media (max-width: 600px) {
@@ -227,20 +244,20 @@ const NavIcons = styled.span`
   display: inline-block;
   vertical-align: middle;
   margin-right: 12px;
-  transform: scale(.85);
+  transform: scale(0.85);
 
   @media (max-width: 600px) {
     display: none;
   }
 `;
 
-const HR = styled.hr`
+const HR = styled.div`
   width: 100%;
-  height: 1px;
-  border: .005rem solid #efefef;
+  border-top: 0.1rem solid #efefef;
 
   @media (max-width: 600px) {
     display: none;
+    border-top: none;
   }
 `;
 
@@ -269,36 +286,22 @@ const ContactIcon = styled(NavIcons)`
 `;
 // #endregion
 
-// #region ImgContainer
-const ImgsContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 360px;
-  margin-top: -40px;
+// #region HeaderImgContainer
+const HeaderImgContainer = styled(ImgsContainer)`
   order: 4;
 
   @media (max-width: 600px) {
     grid-area: imgscontainer;
-    margin-top: -30px;
-    text-align: center;
   }
 `;
 
-const Button = styled.button`
+const HeaderButton = styled(Button)`
   position: absolute;
-  top: 285px;
+  top: 275px;
   left: 60px;
-  z-index: 10;
+  z-index: 100;
 
-  background-color: ${color.yellow};
-  border: none;
-  width: 110px;
-  height: 30px;
-  text-transform: uppercase;
-  font-size: .6rem;
-  font-weight: 600;
-
-  @media (max-width: 600px) { 
+  @media (max-width: 600px) {
     left: 0;
     right: 0;
     margin-left: auto;
@@ -307,85 +310,6 @@ const Button = styled.button`
 
   &:hover {
     color: white;
-  }
-`;
-
-const ImgText = styled.h2`
-  position: absolute;
-  top: 170px;
-  left: 60px;
-  z-index: 10;
-  color: white;
-  font-size: 2rem;
-  text-shadow: 0 0 2px black;
-  font-weight: 600;
-
-  & > .txt_gold {
-    color: ${color.yellow};
-  }
-
-  & > .txt_sub {
-    font-size: 1rem;
-    display: block;
-    margin-top: 5px;
-    font-weight: 100;
-  }
-
-  @media (max-width: 600px) {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.8rem !important;
-  }
-`;
-
-const ImgGradient = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-image: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%,
-  rgba(0,0,0,.75) 100%);
-`;
-
-const ImgMain = styled.img`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-`;
-
-const ImgBg = styled.div`
-  position: absolute;
-  top: -12px;
-  right: 0;
-  width: calc(100% - 60px);
-  height: 384px;
-  z-index: -1;
-  background-color: ${color.yellow};
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-`;
-
-const ImgBehind = styled.img`
-  position: absolute;
-  bottom: -68px;
-  left: -160px;
-  width: 260px;
-  z-index: -5;
-  object-fit: cover;
-  object-position: center;
-
-  @media (max-width: 600px) {
-    display: none;
   }
 `;
 // #endregion
@@ -397,32 +321,76 @@ const Header = () => {
       <NavSection>
         <MenuExpandIcon />
         <NavLinks>
-          <LinksList><h4><HomeIcon /><a href="www.placeholder.com">Home</a></h4><HR /></LinksList>
-          <LinksList><h4><MenuIcon /><a href="www.placeholder.com">Menu</a></h4><HR /></LinksList>
-          <LinksList><h4><PartiesIcon /><a href="www.placeholder.com">Parties</a></h4><HR /></LinksList>
-          <LinksList widthBM><h4><BusinessIcon /><a href="www.placeholder.com">Business Meetings</a></h4><HR /></LinksList>
-          <LinksList><h4><CateringIcon /><a href="www.placeholder.com">Catering</a></h4><HR /></LinksList>
-          <LinksList><h4><ContactIcon /><a href="www.placeholder.com">Contact</a></h4><HR /></LinksList>
+          <LinksList>
+            <h4>
+              <HomeIcon />
+              <a href="www.placeholder.com">Home</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <MenuIcon />
+              <a href="www.placeholder.com">Menu</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <PartiesIcon />
+              <a href="www.placeholder.com">Parties</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList widthBM>
+            <h4>
+              <BusinessIcon />
+              <a href="www.placeholder.com">Business Meetings</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <CateringIcon />
+              <a href="www.placeholder.com">Catering</a>
+            </h4>
+            <HR />
+          </LinksList>
+          <LinksList>
+            <h4>
+              <ContactIcon />
+              <a href="www.placeholder.com">Contact</a>
+            </h4>
+            <HR />
+          </LinksList>
         </NavLinks>
       </NavSection>
       <HoursPhone>
-        <HoursPhoneList><HoursIcon /><span className="hrs_contact_label">Opening Hours: </span><span className="hrs_contact_number">11:00 - 11:00 pm</span></HoursPhoneList>
-        <HoursPhoneList><PhoneIcon /><span className="hrs_contact_label">Contact: </span><span className="hrs_contact_number">+1(832)000-0000</span></HoursPhoneList>
+        <HoursPhoneList>
+          <HoursIcon />
+          <span className="hrs_contact_label">Opening Hours: </span>
+          <span className="hrs_contact_number">11:00 - 11:00 pm</span>
+        </HoursPhoneList>
+        <HoursPhoneList>
+          <PhoneIcon />
+          <span className="hrs_contact_label">Contact: </span>
+          <span className="hrs_contact_number">+1(832)000-0000</span>
+        </HoursPhoneList>
       </HoursPhone>
-      <ImgsContainer>
+      <HeaderImgContainer>
         <ImgGradient />
         <ImgText>
           There Are <span className="txt_gold">1000</span> Reasons
-            <br />
+          <br />
           <span className="txt_sub">Why You Should Visit Us.</span>
         </ImgText>
-        <Button>Reserve A Table</Button>
+        <HeaderButton>Reserve A Table</HeaderButton>
         <ImgMain src={peopleDining} />
         <ImgBg />
         <ImgBehind src={imgBehind} />
-      </ImgsContainer>
+      </HeaderImgContainer>
     </HeaderContainer>
   );
-}
+};
 
 export default Header;
