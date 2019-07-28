@@ -92,4 +92,3 @@ export const ImgBehind = styled.img`
   @media (max-width: 600px) {
     display: none;
   }
-`;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import {
   ImgsContainer,
   ImgText,
@@ -8,7 +9,9 @@ import {
   ImgBg,
   ImgBehind
 } from '../elements/ImgBanner';
+
 import Button from '../elements/Button';
+
 import {
   logo,
   menuExpandIcon,
@@ -23,6 +26,7 @@ import {
   peopleDining,
   imgBehind
 } from '../asset/img';
+
 
 import { color } from '../util';
 
