@@ -31,7 +31,7 @@ export const SideMargins = css`
   margin: 0 1vw;
 
   ${above.large`
-    margin-left:5vw;
-    margin-right:5vw;
+    margin-left: 15.5rem;
+    margin-right: 15.5rem;
   `}
 `;

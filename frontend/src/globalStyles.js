@@ -26,10 +26,11 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
 
-  li {
+  ul {
     list-style-type: none;
   }
-  `;
+`;
 
 export default GlobalStyle;
