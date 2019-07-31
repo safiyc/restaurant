@@ -6,8 +6,8 @@ import {
   ImgText,
   ImgGradient,
   ImgMain,
-  ImgBg,
-  ImgBehind
+  ImgFrame,
+  ImgMini
 } from '../elements/ImgBanner';
 
 import Button from '../elements/Button';
@@ -23,10 +23,9 @@ import {
   contactIcon,
   hoursIcon,
   phoneIcon,
-  peopleDining,
-  imgBehind
+  imgMain,
+  imgMini
 } from '../asset/img';
-
 
 import { color } from '../util';
 
@@ -389,9 +388,9 @@ const Header = () => {
           <span className="txt_sub">Why You Should Visit Us.</span>
         </ImgText>
         <HeaderButton>Reserve A Table</HeaderButton>
-        <ImgMain src={peopleDining} />
-        <ImgBg />
-        <ImgBehind src={imgBehind} />
+        <ImgMain src={imgMain} />
+        <ImgFrame />
+        <ImgMini src={imgMini} />
       </HeaderImgContainer>
     </HeaderContainer>
   );

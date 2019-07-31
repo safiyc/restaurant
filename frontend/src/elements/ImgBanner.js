@@ -66,7 +66,7 @@ export const ImgMain = styled.img`
   object-position: center;
 `;
 
-export const ImgBg = styled.div`
+export const ImgFrame = styled.div`
   position: absolute;
   top: -12px;
   right: 0;
@@ -80,7 +80,7 @@ export const ImgBg = styled.div`
   }
 `;
 
-export const ImgBehind = styled.img`
+export const ImgMini = styled.img`
   position: absolute;
   bottom: -68px;
   left: -160px;
