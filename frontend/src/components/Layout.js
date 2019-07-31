@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Header from './Header';
 import Footer from './Footer';
+import AboutUs from './AboutUs';
 
 // import { above } from '../util';
 
@@ -15,6 +16,7 @@ export default function Layout(props) {
   return (
     <Wrapper>
       <Header />
+      <AboutUs />
       {props.children}
       <Footer />
     </Wrapper>
