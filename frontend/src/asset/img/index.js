@@ -8,8 +8,8 @@ import cateringIcon from './catering_icon.png';
 import contactIcon from './contact_icon.png';
 import hoursIcon from './hours_icon.png';
 import phoneIcon from './phone_icon.png';
-import peopleDining from './people_dining.png';
-import imgBehind from './img_behind.png';
+import imgMain from './img_header_dining.png';
+import imgMini from './img_header_mini.png';
 import map from './map.png'
 
 export {
@@ -23,7 +23,7 @@ export {
   contactIcon,
   hoursIcon,
   phoneIcon,
-  peopleDining,
-  imgBehind,
+  imgMain,
+  imgMini,
   map
 }
