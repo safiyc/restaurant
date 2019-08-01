@@ -5,6 +5,7 @@ import GlobalStyles from './globalStyles';
 import Layout from './components/Layout';
 import Section from './components/Section';
 import Contact from './components/Contact';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Normalize />
       <GlobalStyles />
       <Layout>
-        <Section name="About" />
+        <AboutUs />
         <Section name="mini-menu" />
         <Section name="Testimonials" />
         <Contact />
