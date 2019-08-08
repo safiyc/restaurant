@@ -12,6 +12,12 @@ import imgHeaderMain from './img_header_main.png';
 import imgHeaderMini from './img_header_mini.png';
 import imgAboutMain from './img_about_main.png';
 import imgAboutMini from './img_about_mini.png';
+import imgMiniMenu1 from './img_minimenu1.png';
+import imgMiniMenu2 from './img_minimenu2.png';
+import imgMiniMenu3 from './img_minimenu3.png';
+import imgMiniMenu4 from './img_minimenu4.png';
+import imgMiniMenuRight from './img_minimenu_mini1.png';
+import imgMiniMenuLeft from './img_minimenu_mini2.png';
 import map from './map.png'
 
 export {
@@ -29,5 +35,11 @@ export {
   imgHeaderMini,
   imgAboutMain,
   imgAboutMini,
+  imgMiniMenu1,
+  imgMiniMenu2,
+  imgMiniMenu3,
+  imgMiniMenu4,
+  imgMiniMenuLeft,
+  imgMiniMenuRight,
   map
 }

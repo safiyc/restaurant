@@ -38,6 +38,9 @@ export const HeaderContainer = styled.div`
   grid-auto-flow: column;
   margin-bottom: 30px;
 
+  /* test */
+  padding-left: 70px;
+
   @media (max-width: 600px) {
     grid-template-columns: auto auto auto;
     grid-template-areas:
@@ -45,6 +48,11 @@ export const HeaderContainer = styled.div`
       'imgscontainer imgscontainer imgscontainer';
     margin-bottom: 50px;
     height: auto;
+
+    padding-left: unset;
+
+    /* helper */
+    /* border: 10px solid red; */
   }
 `;
 // #endregion
@@ -215,7 +223,7 @@ export const MenuExpandIcon = styled.span`
 export const LinksList = styled.div`
   margin: 3px 0;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 30px;
   white-space: nowrap;

@@ -3,6 +3,7 @@ import Button from '../../elements/Button';
 
 import { imgAboutMain, imgAboutMini } from '../../asset/img';
 import { color } from '../../util';
+import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 
 export const Wrapper = styled.div`
   display: grid;
@@ -13,8 +14,12 @@ export const Wrapper = styled.div`
     'desc . imgContainer'
     'reserve . imgContainer';
   width: calc(100% - 30px);
+  height: 450px;
   margin: 0 auto;
-  color: grey;
+  color: darkgrey;
+
+  /* test */
+  padding-left: 70px;
 
   @media (max-width: 600px) {
     grid-template-columns: auto;
@@ -25,46 +30,17 @@ export const Wrapper = styled.div`
       'reserve'
       'desc';
     width: 100%;
+    height: unset;
+    padding-left: unset;
+
+    /* helper */
+    /* border: 10px solid red; */
   }
 `;
 
-// #region title squigglyLine
-export const Title = styled.div`
+// #region title & squigglyLine
+export const AboutTitle = styled(Title)`
   grid-area: title;
-  color: black;
-
-  @media (max-width: 600px) {
-    margin: 0 auto;
-  }
-`;
-
-export const Squiggly = styled.div`
-  overflow: hidden;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  
-  @media (max-width: 600px) {
-    margin: 0 auto;
-  }
-`;
-
-export const SqiugglyLine = styled.div`
-  position: absolute;
-  width: 49px;
-  height: 10px;
-
-  &.line1 {
-    background: linear-gradient(-45deg, transparent, transparent 40%, ${color.yellow} 40%, transparent 51%);
-  }
-
-  &.line2 {
-    background: linear-gradient(45deg, transparent, transparent 40%, ${color.yellow} 40%, transparent 51%);
-  }
-
-  &.lineSize {
-    background-size: 14px 15px;
-  }
 `;
 // #endregion
 
@@ -79,11 +55,16 @@ export const Description = styled.div`
 
   @media (max-width: 600px) {
     padding-left: 10px;
+
+      & p:first-child {
+      margin-top: unset;
+    }
   }
 
   & p:first-child {
-    color: black;
+    color: gray;
     font-size: 1.8rem;
+    margin-top: 0;
   }
 `;
 // #endregion
@@ -105,6 +86,10 @@ export const ReserveContainer = styled.div`
     height: unset;
   }
 
+  & .reserve_contact {
+    color: gray;
+  }
+
   & span {
     color: black;
     font-weight: 600;
@@ -113,10 +98,6 @@ export const ReserveContainer = styled.div`
 
 export const ButtonAbout = styled(Button)`
   margin-right: 15px;
-
-  &.reserve_contact {
-    color: red;
-  }
 `;
 // #endregion
 
@@ -149,8 +130,9 @@ export const ImgFrameAbout = styled.div`
     border: none;
     border-top: 12px solid ${color.yellow};
     border-bottom: 12px solid ${color.yellow};
-    top: 0;
+    top: -1px;
     right: 0;
+    height: 101%
   }
 `;
 
@@ -179,4 +161,4 @@ export const ImgMini = styled.img`
 `;
 // #endregion
 
-export { imgAboutMain, imgAboutMini };
+export { imgAboutMain, imgAboutMini, SquigglyLine, Squiggly };
