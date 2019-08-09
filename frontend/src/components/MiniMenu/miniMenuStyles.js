@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from '../../elements/Button';
-import { above } from '../../util';
+import { above, color } from '../../util';
 import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 import {
   imgMiniMenu1,
@@ -18,8 +18,9 @@ export const Wrapper = styled.div`
   color: gray;
 
   ${above.med`
-    margin: 10px auto 40px;
-    padding-left: 25px;
+    width: calc(100% - 170px);
+    margin: 50px auto 40px;
+    padding-left: 0;
   `};
 `;
 
@@ -95,9 +96,10 @@ export const ImgTextContainer = styled.div`
   ${above.med`
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    width: calc(100% - 110px);
+    // width: calc(100% - 110px);
+    width: 100%;
     height: 600px;
-    margin: 50px auto 20px auto;
+    margin: 65px auto 20px;
     box-shadow: 0 -2px 8px 1px rgba(100,100,250,.1);
   `};
 `;
@@ -105,7 +107,8 @@ export const ImgTextContainer = styled.div`
 export const SubContainer = styled.div`
   display: flex;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  border-top: 1px solid ${color.yellow};
 
   &.reverse_subcontainer {
     flex-direction: row-reverse;
@@ -118,6 +121,7 @@ export const SubContainer = styled.div`
 
   ${above.med`
     margin-bottom: unset;
+    border-top: unset;
 
     &.reverse_subcontainer {
       flex-direction: unset;
@@ -127,15 +131,13 @@ export const SubContainer = styled.div`
 
 export const Img = styled.img`
   width: 50%;
-  height: 90%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   position: absolute;
-  bottom: 10px;
   right: 0;
 
   ${above.med`
-    height: 100%;
     position: unset;
   `};
 `;
@@ -143,9 +145,6 @@ export const Img = styled.img`
 export const ImgDesc = styled.div`
   width: 50%;
   padding: 0 15px;
-
-  /* helper */
-  /* background-color: orange; */
 `;
 
 export const ImgBehind = styled.img`
@@ -172,7 +171,7 @@ export const ImgBehindLeft = styled(ImgBehind)`
 export const ImgBehindRight = styled(ImgBehind)`
   ${above.med`
     bottom: 250px;
-    right: -100px;
+    right: -85px;
     transform: scaleX(-1);
   `};
 `;
