@@ -42,14 +42,14 @@ export const HeaderContainer = styled.div`
   ${above.med`
     grid-auto-flow: column;
     grid-template-rows: 100px auto;
-    grid-template-columns: 250px auto;
+    grid-template-columns: 300px auto;
     grid-template-areas:
       'logo hoursphone'
       'navsection imgscontainer';
     height: initial;
     margin-bottom: 100px;
     // padding-left: 70px;
-    padding-left: 40px
+    padding-left: 30px
   `};
 `;
 // #endregion
@@ -65,7 +65,7 @@ export const Logo = styled.div`
   ${above.med`
     width: 250px;
     height: 100px;
-    margin-left: 0;
+    margin-left: 30px;
   `};
 `;
 // #endregion
@@ -173,10 +173,14 @@ export const NavSection = styled.div`
   justify-self: end;
 
   /* issue-link #1 */
+  @media (max-width: 760px){
   &:hover div {
     display: block;
+    margin-top: 0;
+    margin-bottom: 0;
     width: 250px; /* this value to prevent dropdown menu mess with screen width */
-    /* helper */ border-color: red;  
+    /* helper */ border-color: green;  
+  }
   }
   /* end issue */
 

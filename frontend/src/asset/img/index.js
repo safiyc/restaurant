@@ -18,6 +18,9 @@ import imgMiniMenu3 from './img_minimenu3.png';
 import imgMiniMenu4 from './img_minimenu4.png';
 import imgMiniMenuRight from './img_minimenu_mini1.png';
 import imgMiniMenuLeft from './img_minimenu_mini2.png';
+import testimony1 from './testimony1.png';
+import testimony2 from './testimony2.png';
+import testimony3 from './testimony3.png';
 import map from './map.png'
 
 export {
@@ -41,5 +44,8 @@ export {
   imgMiniMenu4,
   imgMiniMenuLeft,
   imgMiniMenuRight,
+  testimony1,
+  testimony2,
+  testimony3,
   map
 }

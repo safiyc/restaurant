@@ -3,10 +3,11 @@ import { Normalize } from 'styled-normalize';
 import GlobalStyles from './globalStyles';
 
 import Layout from './components/Layout';
-import Section from './components/Section';
+// import Section from './components/Section';
 import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
 import MiniMenu from './components/MiniMenu';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Layout>
         <AboutUs />
         <MiniMenu />
-        <Section name="Testimonials" />
+        <Testimonials />
         <Contact />
       </Layout>
     </>
