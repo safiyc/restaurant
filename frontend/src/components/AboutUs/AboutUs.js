@@ -4,13 +4,13 @@ import * as S from './aboutUsStyles';
 export default function AboutUs() {
   return (
     <S.Wrapper>
-      <S.Title>
+      <S.AboutTitle>
         <h2>About us</h2>
         <S.Squiggly>
-          <S.SqiugglyLine className="line1 lineSize" />
-          <S.SqiugglyLine className="line2 lineSize" />
+          <S.SquigglyLine className="line1 lineSize" />
+          <S.SquigglyLine className="line2 lineSize" />
         </S.Squiggly>
-      </S.Title>
+      </S.AboutTitle>
       <S.Description>
         <p>
           Grillmaster is one of the few restaurants in London where you can eat delicious dishes from a real coal grill.

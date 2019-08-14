@@ -10,7 +10,7 @@ const Contact = () => {
     <S.Wrapper className="wrapper">
       <S.MapBackground className="map-background" />
       <S.Content>
-        <Title title="contact"/>
+        <Title title="contact" />
         <S.Address>1 / 2 Oxford Street, London</S.Address>
 
         <S.Phone>
