@@ -1,27 +1,32 @@
 import styled from 'styled-components';
-import { color } from '../util';
+import { above, color } from '../util';
 
 export const ImgsContainer = styled.div`
   position: relative;
   width: 100%;
   height: 360px;
-  margin-top: -40px;
+  margin-top: -30px;
+  text-align: center;
 
-  @media (max-width: 600px) {
-    margin-top: -30px;
-    text-align: center;
-  }
+  ${above.med`
+    margin-top: -40px;
+    text-align: initial;
+  `};
 `;
 
 export const ImgText = styled.h2`
   position: absolute;
-  top: 170px;
-  left: 60px;
+  
   z-index: 10;
   color: white;
   font-size: 2.85rem;
   text-shadow: 0 0 2px black;
   font-weight: 600;
+  left: 0;
+  right: 0;
+  top: 170px;
+  margin-left: auto;
+  margin-right: auto;
 
   & > .txt_gold {
     color: ${color.yellow};
@@ -34,12 +39,11 @@ export const ImgText = styled.h2`
     font-weight: 100;
   }
 
-  @media (max-width: 600px) {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  ${above.med`
+    left: 60px;
+    margin-left: initial;
+    margin-right: initial;
+  `};
 `;
 
 export const ImgGradient = styled.div`
@@ -67,29 +71,30 @@ export const ImgMain = styled.img`
 `;
 
 export const ImgFrame = styled.div`
+  background-color: ${color.yellow};
   position: absolute;
   top: -12px;
-  right: 0;
-  width: calc(100% - 60px);
+  width: 100%;
   height: 384px;
   z-index: -1;
-  background-color: ${color.yellow};
 
-  @media (max-width: 600px) {
-    width: 100%;
-  }
+  ${above.med`
+    width: calc(100% - 60px);
+    right: 0;
+  `};
 `;
 
 export const ImgMini = styled.img`
-  position: absolute;
-  bottom: -68px;
-  left: -160px;
-  width: 260px;
-  z-index: -5;
-  object-fit: cover;
-  object-position: center;
+  display: none;
 
-  @media (max-width: 600px) {
-    display: none;
-  }
-  `;
+  ${above.med`
+    display: initial;
+    position: absolute;
+    bottom: -68px;
+    left: -160px;
+    width: 260px;
+    z-index: -5;
+    object-fit: cover;
+    object-position: center;
+  `};
+`;

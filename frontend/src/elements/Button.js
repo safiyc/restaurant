@@ -10,6 +10,11 @@ const Button = styled.button`
   text-transform: uppercase;
   font-size: 1.1rem;
   font-weight: 600;
+  color: black;
+
+  &:hover {
+    color: white;
+  }
 `;
 
 export default Button;
