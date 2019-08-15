@@ -3,15 +3,14 @@ import { color, above, SideMargins } from '../../util';
 import map from '../../asset/img/map.png';
 
 export const Wrapper = styled.div`
-  display: grid;
 
   ${above.med`
-    grid-template-columns: 100%;
+    display: grid;
+    grid-template-columns: 100vw;
      grid-template-rows: 1fr 1fr;
      grid-template-areas:
        'blank'
        'map';
-
    height: 80vh;
    width: 100vw;
    `}
