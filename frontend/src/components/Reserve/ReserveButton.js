@@ -1,22 +1,10 @@
-import React, { Component } from 'react';
-import ReserveForm from './ReserveForm';
+import React from 'react';
 
-export default class ReserveButton extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            partySize: 1,
-            name: 'john'
 
-        }
-    }
+export default props => (
+    <div>
+        test
+    </div>
+)
 
-    render(){
-        const { partySize, name } = this.state;
-        return (
-            <div>
-                <ReserveForm partySize={partySize} name={name} />
-            </div>
-        )
-    }
-}
+

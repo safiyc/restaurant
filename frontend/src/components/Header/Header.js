@@ -74,7 +74,7 @@ const Header = () => {
           <span className="txt_sub">Why You Should Visit Us.</span>
         </S.ImgText>
         <S.HeaderButton>
-          <Link to='/reserve-form'>
+          <Link to='/reserve'>
             Reserve A Table
           </Link>
         </S.HeaderButton>
