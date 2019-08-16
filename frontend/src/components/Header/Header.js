@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as S from './headerStyles';
+
 
 const Header = () => {
   return (
@@ -71,7 +73,11 @@ const Header = () => {
           <br />
           <span className="txt_sub">Why You Should Visit Us.</span>
         </S.ImgText>
-        <S.HeaderButton>Reserve A Table</S.HeaderButton>
+        <S.HeaderButton>
+          <Link to='/reserve-form'>
+            Reserve A Table
+          </Link>
+        </S.HeaderButton>
         <S.ImgMain src={S.imgHeaderMain} />
         <S.ImgFrame />
         <S.ImgMini src={S.imgHeaderMini} />
