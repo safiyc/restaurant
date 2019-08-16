@@ -14,12 +14,12 @@ import {
 export const Wrapper = styled.div`
   width: 100%;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: gray;
 
   ${above.med`
     width: calc(100% - 170px);
-    margin: 50px auto 40px;
+    margin: 50px auto 20px;
     padding-left: 0;
   `};
 `;
@@ -89,17 +89,16 @@ export const ImgTextContainer = styled.div`
   position: relative;
   display: grid;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 50px;
   grid-template-columns: 1fr;
   background-color: white;
 
   ${above.med`
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    // width: calc(100% - 110px);
     width: 100%;
-    height: 600px;
-    margin: 65px auto 20px;
+    height: 650px;
+    margin: 45px auto 30px;
     box-shadow: 0 -2px 8px 1px rgba(100,100,250,.1);
   `};
 `;
@@ -145,6 +144,30 @@ export const Img = styled.img`
 export const ImgDesc = styled.div`
   width: 50%;
   padding: 0 15px;
+  position: relative;
+`;
+
+export const Arrow = styled.div`
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+
+  &.arrow_right {
+    border-left: 30px solid white;
+    right: -30px;
+  }
+
+  &.arrow_left {
+    border-right: 30px solid white;
+    left: -30px;
+  }
 `;
 
 export const ImgBehind = styled.img`

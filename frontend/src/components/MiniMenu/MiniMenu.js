@@ -31,6 +31,7 @@ export default function MiniMenu() {
               </p>
               <p>from<span>$14,00</span></p>
             </S.Description>
+            <S.Arrow className='arrow_right' />
           </S.ImgDesc>
           <S.Img src={S.imgMiniMenu1} />
         </S.SubContainer>
@@ -49,6 +50,7 @@ export default function MiniMenu() {
               </p>
               <p>from <span>$14,00</span></p>
             </S.Description>
+            <S.Arrow className='arrow_right' />
           </S.ImgDesc>
           <S.Img src={S.imgMiniMenu2} />
         </S.SubContainer>
@@ -68,6 +70,7 @@ export default function MiniMenu() {
               </p>
               <p>from<span>$14,00</span></p>
             </S.Description>
+            <S.Arrow className='arrow_left' />
           </S.ImgDesc>
         </S.SubContainer>
         <S.SubContainer className='reverse_subcontainer' >
@@ -86,6 +89,7 @@ export default function MiniMenu() {
               </p>
               <p>from<span>$14,00</span></p>
             </S.Description>
+            <S.Arrow className='arrow_left' />
           </S.ImgDesc>
         </S.SubContainer>
         <S.ImgBehindLeft src={S.imgMiniMenuLeft} />
