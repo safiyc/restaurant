@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import App from './App';
-import ReserveButton from './components/Reserve/ReserveButton'
+import Reserve from './components/Reserve/Reserve'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -10,7 +10,7 @@ const Root = () => (
     <Router>
         <Switch>
             <Route component={App} exact path="/" />
-            <Route component={ReserveButton} path="/reserve-form" />
+            <Route component={Reserve} path="/reserve" />
         </Switch>
     </Router>
 )
