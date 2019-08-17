@@ -4,16 +4,15 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default props => {
-    const { partySize, name, startDate, handleChange } = props;
+    const { partySize, name, startDate, handleChange, handleAdd, handleSubmit } = props;
     return (
-            <form onChange={handleChange}>
+            <form onSubmit={handleSubmit}>
                 Party Size:
-                <input type='text' value={partySize} />
+                <input  value={partySize} onChange={handleChange} />
                 <br />
                 Name:
-                <input type='text' value={name}/>
+                <input  value={name} onChange={handleChange}/>
                 <br />
-                Date:
 
                 <DatePicker
                     selected={startDate}
@@ -23,10 +22,10 @@ export default props => {
                     timeIntervals={15}
                     dateFormat="MMMM d, yyyy h:mm aa"
                     timeCaption="time"
-                    value="Pick a Date and time"
+                    value="Pick a Date and Time"
                 />
                 <br />
-                <button type="submit">Reserve your table</button>
+                <button type="submit" onClick={handleAdd} >Reserve your table</button>
             </form>
         )
     }

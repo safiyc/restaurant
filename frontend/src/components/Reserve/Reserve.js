@@ -1,40 +1,84 @@
 import React, { Component } from 'react';
 
-import ReserveForm from './ReserveForm';
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+
+// import ReserveForm from './ReserveForm';
 
 
 export default class Reserve extends Component {
     constructor(props){
         super(props);
         this.state = {
-            partySize: 1,
-            name: 'john',
+            partySize: "",
+            name: "",
             startDate: new Date()
         }
-    }
-
-    handleChange = (date) => {
-        this.setState({
-            startDate: date
-        });
     }
 
     handleAdd = () => {
         console.log(this);
     }
 
+    handleChange = (e) => {
+        this.setState({
+            partySize: e.target.value,
+            name: e.target.value,
+            startDate: e.target.value
+        });
+
+        // this is a way to do it.
+        // this.setState(prevState => ({
+        //     ...prevState,
+        //     partySize: e.target.value,
+        //     name: e.target.value,
+        //     startDate: e.target.value
+        // }))
+
+        // this.setState({ [e.target.name]: e.target.value })
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+    }
+
     render(){
-        const { partySize, name, startDate, handleChange, handleAdd } = this.state;
+        const { partySize, name, startDate, handleChange, handleAdd, handleSubmit } = this.state;
         return (
-            <div>
-                <ReserveForm 
-                    partySize={partySize} 
-                    name={name} 
-                    date={startDate}
-                    handleChange={handleChange}
-                    handleAdd={handleAdd}
+
+            <form onSubmit={handleSubmit}>
+                Party Size:
+                <input  value={partySize} onChange={handleChange} />
+                <br />
+                Name:
+                <input  value={name} onChange={handleChange}/>
+                <br />
+
+                <DatePicker
+                    selected={startDate}
+                    onChange={handleChange}
+                    showTimeSelect
+                    timeFormat="HH:mm"
+                    timeIntervals={15}
+                    dateFormat="MMMM d, yyyy h:mm aa"
+                    timeCaption="time"
+                    value={startDate}
                 />
-            </div>
+                <br />
+                <button type="submit" onClick={handleAdd} >Reserve your table</button>
+            </form>
+
+            // <div>
+            //     <ReserveForm 
+            //         partySize={partySize} 
+            //         name={name} 
+            //         startDate={startDate}
+            //         handleChange={handleChange}
+            //         handleAdd={handleAdd}
+            //         handleSubmit={handleSubmit}
+            //     />
+            // </div>
         )
     }
 }
