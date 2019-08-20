@@ -18,7 +18,7 @@ function App() {
         <AboutUs />
         <MiniMenu />
         <Testimonials />
-        <Contact />
+        {/* <Contact /> */}
       </Layout>
     </>
   );
