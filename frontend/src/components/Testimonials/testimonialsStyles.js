@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 import { above, color } from '../../util';
 import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 
@@ -197,7 +197,7 @@ export const ReserveContainer = styled.div`
   `};
 `;
 
-export const ButtonReserve = styled(Button)`
+export const ButtonCustomers = styled(Button)`
   margin-left: 6px;
 `;
 // #endregion

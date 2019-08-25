@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonReserve } from '../../elements/Button';
 import * as S from './miniMenuStyles';
 
 export default function MiniMenu() {
@@ -16,7 +17,7 @@ export default function MiniMenu() {
         <S.Description>
           <S.Subheading>Great memories are made with good food.</S.Subheading>
         </S.Description>
-        <S.ButtonAbout>Reserve A Table</S.ButtonAbout>
+        <S.ButtonMenu><ButtonReserve /></S.ButtonMenu>
         <S.ImgTextContainer>
           <S.SubContainer>
             <S.ImgDesc>

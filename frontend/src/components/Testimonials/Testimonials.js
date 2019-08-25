@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonReserve } from '../../elements/Button';
 import * as S from './testimonialsStyles';
 
 export default function Testimonials() {
@@ -65,7 +66,7 @@ export default function Testimonials() {
         <S.Votes>(421 votes)</S.Votes>
       </S.Summary>
       <S.ReserveContainer>
-        <div className="reserve_contact">Call us: <span>+1(832)000-0000</span> or</div> <S.ButtonReserve>Reserve A Table</S.ButtonReserve>
+        <div className="reserve_contact">Call us: <span>+1(832)000-0000</span> or</div> <S.ButtonCustomers><ButtonReserve /></S.ButtonCustomers>
       </S.ReserveContainer>
     </S.Wrapper>
   )

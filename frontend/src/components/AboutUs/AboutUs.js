@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonReserve } from '../../elements/Button';
 import * as S from './aboutUsStyles';
 
 export default function AboutUs() {
@@ -21,7 +22,7 @@ export default function AboutUs() {
           </p>
         </S.Description>
         <S.ReserveContainer>
-          <S.ButtonAbout>Reserve A Table</S.ButtonAbout><div className="reserve_contact">or call us via: <span>+1(832)000-0000</span></div>
+          <S.ButtonAbout><ButtonReserve /></S.ButtonAbout><div className="reserve_contact">or call us via: <span>+1(832)000-0000</span></div>
         </S.ReserveContainer>
         <S.ImgContainer>
           <S.ImgMain src={S.imgAboutMain} />

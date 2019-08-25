@@ -9,7 +9,7 @@ import {
   ImgMini
 } from '../../elements/ImgBanner';
 
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 
 import {
   logo,

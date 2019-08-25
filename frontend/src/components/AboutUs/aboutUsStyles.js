@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 
 import { imgAboutMain, imgAboutMini } from '../../asset/img';
 import { color, above } from '../../util';
