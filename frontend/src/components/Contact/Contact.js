@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonReserve } from '../../elements/Button';
 import * as S from './contactStyles';
 
 const Contact = () => {
@@ -38,7 +39,7 @@ const Contact = () => {
             <p>Email address</p>
           </S.EmailIcon>
         </S.Info>
-        <S.ButtonContact>Reserve Table</S.ButtonContact>
+        <S.ButtonContact><ButtonReserve /></S.ButtonContact>
       </S.Content>
     </S.Wrapper>
   );

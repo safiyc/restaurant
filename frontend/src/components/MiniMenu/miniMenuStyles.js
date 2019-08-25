@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 import { above, color } from '../../util';
 import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 import {
@@ -103,7 +103,7 @@ export const Description = styled.div`
   }
 `;
 
-export const ButtonAbout = styled(Button)`
+export const ButtonMenu = styled(Button)`
   display: block;
   margin: 20px auto 0;
 `;

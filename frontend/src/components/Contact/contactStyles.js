@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 import { color, above } from '../../util';
 import map from '../../asset/img/map.png';
 import addressIcon from '../../asset/SVG-icon/location-pin.svg';
