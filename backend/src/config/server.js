@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const server = express();
-const port = 3010;
+const allowCors = require('./cors');
+const port = 3050;
 
 
 server.use(bodyParser.urlencoded({ extended: true}));
 server.use(bodyParser.json());
+server.use(allowCors);
 
 // server.get('/', function(req, res){
 //     res.send('Homepage');
