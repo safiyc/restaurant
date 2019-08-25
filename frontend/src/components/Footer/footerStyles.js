@@ -1,65 +1,84 @@
 import styled from 'styled-components';
-import { color, above, SideMargins } from '../../util';
+import { color, above } from '../../util';
 
 export const Footer = styled.footer`
-  display: grid;
-
+  width: 100%;
   background: ${color.black};
   color: ${color.gray};
-  max-width: 100vw;
-  overflow: hidden;
 `;
 
 export const Content = styled.div`
+  padding: 0 15px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 50vw 50vw;
-  ${SideMargins};
+  grid-template-areas:
+    'sitemap links'
+    'subscribe subscribe'
+    'follow follow';
   margin-top: 1rem;
   margin-bottom: 2rem;
 
   ${above.med`
-    grid-template-columns: 1.5fr 1.5fr 4fr 3fr;
-    /* margin: 3.7rem 0 6.4rem 0; */
+    width: calc(100% - 170px);
+    padding: 0;
+    grid-template-columns: repeat(2, 85px) minmax(215px, 300px) minmax(80px, 200px);
+    grid-column-gap: 20px;
+    justify-content: space-between;
+    grid-template-areas: 'sitemap links subscribe follow';
   `};
 `;
 
 const Column = styled.div`
-  /* width: auto; */
-  margin: 0 3rem;
   font-size: 1.4rem;
   line-height: 2.6rem;
 
   ul {
     padding: 0;
+    margin: 0;
+
+    li:hover {
+      color: ${color.yellow};
+    }
   }
 `;
 
 export const SiteMapColumn = styled(Column)`
-  ${above.med`
-    grid-column: 1/2;
-  `}
+  grid-area: sitemap;
 `;
 
 export const LinksColumn = styled(Column)`
-  ${above.med`
-    grid-column: 2/3;
-  `}
+  grid-area: links;
 `;
 
 export const SubscribeColumn = styled(Column)`
-  grid-column: 1/-1;
-
-  ${above.med`
-    grid-column: 3/4;
-  `}
+  grid-area: subscribe;
 `;
 
 export const FollowColumn = styled(Column)`
-  grid-column: 1/-1;
+  grid-area: follow;
 
-  ${above.med`
-    grid-column: 4/5;
-  `}
+  ul {
+    width: 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      border: 1px solid ${color.gray};
+      border-radius: 20px;
+      width: 28px;
+      height: 28px;
+      line-height: 25px;
+      color: ${color.gray};
+      text-align: center;
+      font-size: 1.2rem;
+
+      &:hover {
+        border: 1px solid ${color.yellow};
+        color: ${color.yellow};
+      }
+    }
+  }
 `;
 
 export const h4 = styled.h4`

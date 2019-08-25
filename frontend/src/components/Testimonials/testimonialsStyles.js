@@ -54,13 +54,14 @@ export const Subheading = styled.div`
 export const Customers = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: -5px;
   margin-bottom: 10px;
   grid-area: customers;
 
   ${above.med`
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   `};
 `;
 
@@ -73,7 +74,7 @@ export const Customer = styled.div`
   padding-top: 20px;
 
   ${above.med`
-    box-shadow: 0 -2px 8px 1px rgba(100,100,250,.1);
+    box-shadow: 0 0px 15px 5px rgba(100,100,250,.1);
     width: 32%;
     margin: unset;
     border-radius: unset;

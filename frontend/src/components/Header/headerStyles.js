@@ -36,20 +36,19 @@ export const HeaderContainer = styled.div`
     'logo hoursphone navsection'
     'imgscontainer imgscontainer imgscontainer';
   width: 100%;
-  height: 500px;
+  height: 475px;
   margin-bottom: 0;
 
   ${above.med`
     grid-auto-flow: column;
     grid-template-rows: 100px auto;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
       'logo hoursphone'
       'navsection imgscontainer';
     height: initial;
     margin-bottom: 100px;
-    // padding-left: 70px;
-    padding-left: 30px
+    padding-left: 45px;
   `};
 `;
 // #endregion
@@ -61,6 +60,7 @@ export const Logo = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   width: 150px;
+  margin-left: 10px;
 
   ${above.med`
     width: 250px;
@@ -108,9 +108,7 @@ export const HoursPhoneList = styled.li`
     color: grey;
   }
 
-  ${above.med`
-    padding: 0 20px 0 12px;
-
+  ${above.med` 
     & > .hrs_contact_label {
       display: inline-block;
       margin-top: 5px;
@@ -125,13 +123,19 @@ export const HoursPhoneList = styled.li`
     }
   `};
 
-  &:not(last-child):first-child {
+  &:first-child {
     border-right: none;
     
-    ${above.med`
-      padding-right: 20px;
+    @media (min-width: 795px){
+      padding: 0 20px 0 12px;
       border-right: 1px dashed #efefef;
-    `};
+    }
+  }
+  
+  &:last-child {
+    @media(min-width: 795px) {
+      padding: 0 20px 0 8px;
+    }
   }
 `;
 
@@ -160,7 +164,8 @@ export const PhoneIcon = styled(HoursPhoneIcons)`
   margin-left: -4px;
 
   ${above.med`
-    margin-left: unset;
+    margin-left: 4px;
+    margin-right: 0;
   `};
 `;
 // #endregion
@@ -172,17 +177,14 @@ export const NavSection = styled.div`
   list-style: none;
   justify-self: end;
 
-  /* issue-link #1 */
   @media (max-width: 760px){
-  &:hover div {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 250px; /* this value to prevent dropdown menu mess with screen width */
-    /* helper */ border-color: green;  
+    &:hover div {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 250px; /* this value to prevent dropdown menu mess with screen width */ 
+    }
   }
-  }
-  /* end issue */
 
   &:hover span {
     border: 3px solid black;
@@ -193,13 +195,6 @@ export const NavSection = styled.div`
     margin: 10px 10px 0 0;
     padding-left: 35px;
     justify-self: initial;
-
-    // issue-link #1
-    // &:hover div {
-      // display: block;
-      // border-color: green;
-    // }
-    // end issue
 
     &:hover span {
       border: none;
@@ -235,6 +230,7 @@ export const MenuExpandIcon = styled.span`
   width: 40px;
   height: 29px;
   margin-top: 14px;
+  margin-right: 10px;
 
   ${above.med`
     display: none;
