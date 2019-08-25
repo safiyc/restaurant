@@ -1,4 +1,6 @@
 // import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { color } from '../util';
 
@@ -17,4 +19,12 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+const ButtonReserve = () => {
+  return (
+    <Link to='/reserve'>
+      Reserve A Table
+    </Link>
+  )
+};
+
+export { Button, ButtonReserve };

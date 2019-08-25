@@ -43,6 +43,11 @@ const Footer = () => {
             Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
             malesuada fames
           </p>
+          <ul>
+            <li>Fb</li>
+            <li>Tw</li>
+            <li>LI</li>
+          </ul>
         </S.FollowColumn>
       </S.Content>
     </S.Footer>

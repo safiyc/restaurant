@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import Button from '../../elements/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Button } from '../../elements/Button';
 import { above, color } from '../../util';
 import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 
@@ -10,16 +12,30 @@ export const Wrapper = styled.div`
   margin-top: 0;
   margin-bottom: 40px;
   color: gray;
+  display: grid;
+  grid-template-rows: 120px auto auto auto;
+  grid-template-areas:
+     'title'
+     'customers'
+     'summary'
+     'reservation';
 
   ${above.med`
     width: calc(100% - 170px);
-    margin: 50px auto 40px;
+    margin: 0 auto 40px;
     padding-left: 0;
+    grid-template-rows: none;
+    grid-template-areas:
+     'title title'
+     'customers customers'
+     'summary reservation';
   `};
 `;
 
 // #region title
 export const TitleTestimonial = styled(Title)`
+  grid-area: title;
+
   & *{
     text-align: center;
     margin-left: auto;
@@ -34,11 +50,35 @@ export const Subheading = styled.div`
 `;
 // #endregion
 
-// #region customer
+// #region customers
+export const Customers = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  grid-area: customers;
+
+  ${above.med`
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  `};
+`;
+
 export const Customer = styled.div`
-  box-shadow: 0 -2px 8px 1px rgba(100,100,250,.1);
-  margin: 10px 0;
+  box-shadow: 0 0 2px 2px rgba(100,100,250,.1);
+  border-radius: 10px;
+  width: 95%;
+  margin: 0 auto 10px;
   padding: 15px;
+  padding-top: 20px;
+
+  ${above.med`
+    box-shadow: 0 0px 15px 5px rgba(100,100,250,.1);
+    width: 32%;
+    margin: unset;
+    border-radius: unset;
+  `};
 `;
 
 export const PersonInfo = styled.div`
@@ -47,7 +87,7 @@ export const PersonInfo = styled.div`
   grid-template-areas:
     'image name'
     'image submittedWhen';
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export const Image = styled.img`
@@ -73,20 +113,74 @@ export const Description = styled.div`
 `;
 
 export const Rating = styled.div`
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: -2px;
+  font-size: 1.4rem;
+
+  & > * {
+    margin: 0 2px;
+  }
+
+  & > .unchecked {
+    color: lightgray;
+  }
+
+  & > .checked {
+    color: ${color.yellow};
+  }
 `;
 
 export const Summary = styled.div`
-  background-color: yellow; /* helper */
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: summary;
+  margin: 0 auto;
+
+  & div:first-child {
+    margin-right: 15px;
+    color: black;
+    font-weight: 600;
+  }
+
+  & div:not(:first-child) {
+    width: fit-content;
+  }
+
+  /* Star rating */
+  & div:nth-child(3) {
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  ${above.med`
+    margin: unset;
+
+    & div:first-child {
+      width: 100%;
+      margin: 0 0 10px;
+    }
+  `};
+`;
+
+export const AverageScore = styled.div`
+  margin-right: 10px;
+  color: ${color.yellow};
+`;
+
+export const Votes = styled.div`
+  color: lightgray;
+  font-size: 1.4rem;
 `;
 // #endregion
 
 // #region reserve
 export const ReserveContainer = styled.div`
-  grid-area: reserve;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 80px;
-  margin: 0 auto 10px;
+  grid-area: reservation;
+  margin-top: 20px;
 
   & .reserve_contact {
     color: gray;
@@ -98,13 +192,13 @@ export const ReserveContainer = styled.div`
   }
 
   ${above.med`
-    margin: unset;
-    margin-top: -25px;
+    margin-top: unset;
+    justify-content: flex-end;
   `};
 `;
 
-export const ButtonAbout = styled(Button)`
-  margin-right: 15px;
+export const ButtonCustomers = styled(Button)`
+  margin-left: 6px;
 `;
 // #endregion
 
@@ -114,5 +208,7 @@ export {
   Button,
   testimony1,
   testimony2,
-  testimony3
+  testimony3,
+  FontAwesomeIcon,
+  faStar
 };

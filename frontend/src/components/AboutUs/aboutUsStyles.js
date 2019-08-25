@@ -1,11 +1,16 @@
 import styled from 'styled-components';
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 
 import { imgAboutMain, imgAboutMini } from '../../asset/img';
 import { color, above } from '../../util';
 import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 
+
 export const Wrapper = styled.div`
+  width: 100%;
+`;
+
+export const Content = styled.div`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -18,17 +23,16 @@ export const Wrapper = styled.div`
   color: darkgrey;
 
   ${above.med`
-    grid-template-columns: 60% 2% 30%;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 20% auto auto;
+    grid-column-gap: 20px;
     grid-template-areas:
-      'title . imgContainer'
-      'desc . imgContainer'
-      'reserve . imgContainer';
-    width: calc(100% - 30px);
+      'title imgContainer'
+      'desc imgContainer'
+      'reserve imgContainer';
+    width: calc(100% - 170px);
     height: 450px;
     margin: 0 auto;
-
-    padding-left: 70px;
   `};
 `;
 
@@ -47,7 +51,7 @@ export const Description = styled.div`
   line-height: 30px;
   font-weight: 600;
   font-size: 1.5rem;
-  padding: 0 10px;
+  padding: 0 15px;
 
   & p:first-child {
     margin-top: 10px;

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ButtonReserve } from '../../elements/Button';
 import * as S from './headerStyles';
-
 
 const Header = () => {
   return (
@@ -74,9 +73,7 @@ const Header = () => {
           <span className="txt_sub">Why You Should Visit Us.</span>
         </S.ImgText>
         <S.HeaderButton>
-          <Link to='/reserve'>
-            Reserve A Table
-          </Link>
+          <ButtonReserve />
         </S.HeaderButton>
         <S.ImgMain src={S.imgHeaderMain} />
         <S.ImgFrame />

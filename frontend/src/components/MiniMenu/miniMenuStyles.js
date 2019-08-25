@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
 import { above, color } from '../../util';
 import { Title, Squiggly, SquigglyLine } from '../../elements/SquigglyTitle';
 import {
@@ -14,12 +14,35 @@ import {
 export const Wrapper = styled.div`
   width: 100%;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: gray;
+  position: relative;
+
+  background: rgb(250,250,250);
+
+  ${above.med`
+    margin-top: 40px;
+    background: unset;
+  `};
+`;
+
+export const Background = styled.div`
+  ${above.med`
+    background: rgb(250,250,250);
+    width: 100%;
+    height: 675px;
+    position: absolute;
+    top: 0;
+    z-index: -5;
+  `};
+`;
+
+export const Content = styled.div`
+  margin-top: 20px;
 
   ${above.med`
     width: calc(100% - 170px);
-    margin: 50px auto 40px;
+    margin: 40px auto 20px;
     padding-left: 0;
   `};
 `;
@@ -80,7 +103,7 @@ export const Description = styled.div`
   }
 `;
 
-export const ButtonAbout = styled(Button)`
+export const ButtonMenu = styled(Button)`
   display: block;
   margin: 20px auto 0;
 `;
@@ -89,18 +112,18 @@ export const ImgTextContainer = styled.div`
   position: relative;
   display: grid;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 50px;
+  margin-bottom: 5px;
   grid-template-columns: 1fr;
-  background-color: white;
 
   ${above.med`
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    // width: calc(100% - 110px);
     width: 100%;
-    height: 600px;
-    margin: 65px auto 20px;
-    box-shadow: 0 -2px 8px 1px rgba(100,100,250,.1);
+    height: 650px;
+    margin: 45px auto 30px;
+    box-shadow: 0 0px 15px 5px rgba(100,100,250,.1);
+    background-color: white;
   `};
 `;
 
@@ -145,6 +168,38 @@ export const Img = styled.img`
 export const ImgDesc = styled.div`
   width: 50%;
   padding: 0 15px;
+  position: relative;
+`;
+
+export const Arrow = styled.div`
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+
+  &.arrow_right {
+    border-left: 30px solid rgb(250,250,250);
+    right: -30px;
+
+    ${above.med`
+      border-left: 30px solid white;
+    `};
+  }
+
+  &.arrow_left {
+    border-right: 30px solid rgb(250,250,250);
+    left: -30px;
+
+    ${above.med`
+      border-right: 30px solid white;
+    `};
+  }
 `;
 
 export const ImgBehind = styled.img`
