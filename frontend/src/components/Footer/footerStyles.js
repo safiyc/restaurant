@@ -21,9 +21,10 @@ export const Content = styled.div`
   ${above.med`
     width: calc(100% - 170px);
     padding: 0;
-    grid-template-columns: auto auto 35% 25%;
+    grid-template-columns: repeat(2, 85px) minmax(215px, 300px) minmax(80px, 200px);
+    grid-column-gap: 20px;
+    justify-content: space-between;
     grid-template-areas: 'sitemap links subscribe follow';
-    grid-gap: 30px;
   `};
 `;
 
