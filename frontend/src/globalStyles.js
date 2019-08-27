@@ -15,14 +15,15 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 1.6rem; //16px
-    margin: 0 auto;
     height: 100%;
+    overflow-y: scroll;
 
-    ${above.med`
+    /* ${above.med`
+      margin: 0 auto;
       max-width: 1600px;
       border-left: 1px solid ${color.yellow};
       border-right: 1px solid ${color.yellow};
-    `};
+    `}; */
   }
 
   h1, h2, h3, h4, h5, h6 {
