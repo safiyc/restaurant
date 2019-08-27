@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
 import {
+  HeaderContainer,
+  HoursPhone,
+  HoursPhoneList,
+  HoursPhoneIcons,
+  HoursIcon,
+  PhoneIcon
+} from '../HeaderPartial/headerPartialStyles';
+
+import {
   ImgsContainer,
   ImgText,
   ImgGradient,
@@ -12,7 +21,6 @@ import {
 import { Button } from '../../elements/Button';
 
 import {
-  logo,
   menuExpandIcon,
   homeIcon,
   menuIcon,
@@ -20,16 +28,17 @@ import {
   businessIcon,
   cateringIcon,
   contactIcon,
-  hoursIcon,
-  phoneIcon,
   imgHeaderMain,
   imgHeaderMini
 } from '../../asset/img';
 
 import { above, color } from '../../util';
 
+// styles for HoursPhone(and nested) in file:
+// headerPartialstyles.js
+
 // #region HeaderContainer
-export const HeaderContainer = styled.div`
+export const Wrapper = styled(HeaderContainer)`
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-areas:
@@ -47,125 +56,8 @@ export const HeaderContainer = styled.div`
       'logo hoursphone'
       'navsection imgscontainer';
     height: initial;
-    margin-bottom: 100px;
     padding-left: 45px;
-  `};
-`;
-// #endregion
-
-// #region Logo
-export const Logo = styled.div`
-  grid-area: logo;
-  background-image: url(${logo});
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 150px;
-  margin-left: 10px;
-
-  ${above.med`
-    width: 250px;
-    height: 100px;
-    margin-left: 30px;
-  `};
-`;
-// #endregion
-
-// #region HoursPhone
-export const HoursPhone = styled.ul`
-  grid-area: hoursphone;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: grey;
-  height: 25px;
-  width: 125px;
-  margin-top: 15px;
-  margin-right: 5px;
-  padding-left: 0;
-
-  ${above.med`
-    flex-direction: row;
-    width: unset;
-    margin: 10px 0 25px;
-  `};
-`;
-
-export const HoursPhoneList = styled.li`
-  position: relative;
-  white-space: nowrap;
-  padding: 0;
-
-
-  & > .hrs_contact_label {
-    display: none;
-  }
-
-  & > .hrs_contact_number {
-    position: absolute;
-    right: 0;
-    color: grey;
-  }
-
-  ${above.med` 
-    & > .hrs_contact_label {
-      display: inline-block;
-      margin-top: 5px;
-      margin-right: 5px;
-    }
-
-    & > .hrs_contact_number {
-      position: relative;
-      display: inline-block;
-      color: black;
-      font-weight: 600;
-    }
-  `};
-
-  &:first-child {
-    border-right: none;
-    
-    @media (min-width: 795px){
-      padding: 0 20px 0 12px;
-      border-right: 1px dashed #efefef;
-    }
-  }
-  
-  &:last-child {
-    @media(min-width: 795px) {
-      padding: 0 20px 0 8px;
-    }
-  }
-`;
-
-export const HoursPhoneIcons = styled.div`
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 25px;
-  margin-right: 5px;
-  vertical-align: middle;
-
-  ${above.med`
-    width: 28px;
-  `};
-`;
-
-export const HoursIcon = styled(HoursPhoneIcons)`
-  background-image: url(${hoursIcon});
-  width: 18px;
-`;
-
-export const PhoneIcon = styled(HoursPhoneIcons)`
-  background-image: url(${phoneIcon});
-  width: 23px;
-  margin-left: -4px;
-
-  ${above.med`
-    margin-left: 4px;
-    margin-right: 0;
+    margin-bottom: 100px;
   `};
 `;
 // #endregion
@@ -256,7 +148,7 @@ export const LinksList = styled.div`
     `};
   }
 
-  & > h4 > a {
+  & > h4 > .nav_links {
     display: inline-block;
     color: ${color.black};
     text-decoration: none;
@@ -268,7 +160,7 @@ export const LinksList = styled.div`
     `};
   }
 
-  & > h4 > a:hover {
+  & > h4 > .nav_links:hover {
     background-color: ${color.yellow};
 
     ${above.med`
@@ -357,5 +249,10 @@ export {
   ImgMini,
   ImgFrame,
   imgHeaderMain,
-  imgHeaderMini
+  imgHeaderMini,
+  HoursPhone,
+  HoursPhoneList,
+  HoursPhoneIcons,
+  HoursIcon,
+  PhoneIcon
 }

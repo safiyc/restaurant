@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Normalize } from 'styled-normalize';
+import GlobalStyles from './globalStyles';
 import App from './App';
 import Reserve from './components/Reserve/Reserve'
-
 import * as serviceWorker from './serviceWorker';
 
 const Root = () => (
-    <Router>
-        <Switch>
-            <Route component={App} exact path="/" />
-            <Route component={Reserve} path="/reserve" />
-        </Switch>
-    </Router>
+  <Router>
+    <Normalize />
+    <GlobalStyles />
+    <Switch>
+      <Route component={App} exact path="/" />
+      <Route component={Reserve} path="/reserve" />
+    </Switch>
+  </Router>
 )
 
 ReactDOM.render(<Root />, document.getElementById('root'));

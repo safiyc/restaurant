@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { color, above } from '../../util';
 
 export const Footer = styled.footer`
+  height: 100%;
   width: 100%;
   background: ${color.black};
   color: ${color.gray};
@@ -15,7 +16,6 @@ export const Content = styled.div`
     'sitemap links'
     'subscribe subscribe'
     'follow follow';
-  margin-top: 1rem;
   margin-bottom: 2rem;
 
   ${above.med`
@@ -25,6 +25,7 @@ export const Content = styled.div`
     grid-column-gap: 20px;
     justify-content: space-between;
     grid-template-areas: 'sitemap links subscribe follow';
+    margin-bottom: 4rem;
   `};
 `;
 

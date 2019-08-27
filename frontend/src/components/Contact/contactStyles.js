@@ -112,16 +112,21 @@ export const Info = styled.div`
 
 export const Icons = styled.span`
   display: flex;
+  margin-top: -6px;
 
   & p {
     margin-left: 6px;
     font-size: 1.3rem;
     color: ${color.gray};
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 26px;
 
     ${above.med`
-      margin-top: 12px;
+      margin-top: 16px;
+
+      & p {
+        margin-top: 30px;
+      }
     `};
   }
 `;
