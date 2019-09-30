@@ -9,23 +9,22 @@ export const Footer = styled.footer`
 `;
 
 export const Content = styled.div`
-  padding: 0 15px;
+  padding: 0 15px 3rem;
   margin: 0 auto;
   display: grid;
   grid-template-areas:
     'sitemap links'
     'subscribe subscribe'
     'follow follow';
-  margin-bottom: 2rem;
 
   ${above.med`
     width: calc(100% - 170px);
     padding: 0;
+    padding-bottom: 3rem;
     grid-template-columns: repeat(2, 85px) minmax(215px, 300px) minmax(80px, 200px);
     grid-column-gap: 20px;
     justify-content: space-between;
     grid-template-areas: 'sitemap links subscribe follow';
-    margin-bottom: 4rem;
   `};
 `;
 

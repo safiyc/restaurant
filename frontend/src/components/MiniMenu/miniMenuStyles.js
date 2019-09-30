@@ -13,6 +13,7 @@ import {
 
 export const Wrapper = styled.div`
   width: 100%;
+  padding-top: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: gray;
@@ -21,6 +22,7 @@ export const Wrapper = styled.div`
   background: rgb(250,250,250);
 
   ${above.med`
+    padding-top: 10px;
     margin-top: 40px;
     background: unset;
   `};

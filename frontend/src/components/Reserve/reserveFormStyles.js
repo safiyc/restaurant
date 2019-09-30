@@ -13,16 +13,16 @@ export const Wrapper = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 100%;
+  width: 400px;
+  margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   ${above.med`
-    width: calc(100% - 170px);
-    margin: 0 auto;
-    flex-wrap: wrap;
+    width: auto;
     flex-direction: row;
+    flex-wrap: wrap;
   `};
 `;
 
@@ -33,6 +33,11 @@ export const FormGroup = styled.div`
   display: flex;
   justify-content: space-between;
 
+  input, DatePicker {
+    text-align: center;
+    width: 200px;
+  }
+
   ${above.med`
     width: auto;
     flex-direction: column;
@@ -40,16 +45,17 @@ export const FormGroup = styled.div`
   `};
 `;
 
-export const FormGroupBtn = styled(FormGroup)`
-  margin: 30px auto 0;
-
-  ${above.med`
-    width: 100%;
-  `};
+export const BtnContainer = styled.div`
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
 `;
 
 export const ButtonReserve = styled(Button)`
   width: 130px;
   color: black;
   margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
 `;

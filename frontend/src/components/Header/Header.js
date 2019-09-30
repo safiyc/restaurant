@@ -13,7 +13,6 @@ const Header = () => {
           <S.LinksList>
             <h4>
               <S.HomeIcon />
-              {/* <a href="#">Home</a> */}
               <Link to='/' className='nav_links'>Home</Link>
             </h4>
             <S.HR />
@@ -21,7 +20,6 @@ const Header = () => {
           <S.LinksList>
             <h4>
               <S.MenuIcon />
-              {/* <a href="www.placeholder.com">Menu</a> */}
               <Link to='/' className='nav_links'>Menu</Link>
             </h4>
             <S.HR />
@@ -29,7 +27,6 @@ const Header = () => {
           <S.LinksList>
             <h4>
               <S.PartiesIcon />
-              {/* <a href="www.placeholder.com">Parties</a> */}
               <Link to='/' className='nav_links'>Parties</Link>
             </h4>
             <S.HR />
@@ -37,7 +34,6 @@ const Header = () => {
           <S.LinksList widthBM>
             <h4>
               <S.BusinessIcon />
-              {/* <a href="www.placeholder.com">Business Meetings</a> */}
               <Link to='/' className='nav_links'>Business Meetings</Link>
             </h4>
             <S.HR />
@@ -45,7 +41,6 @@ const Header = () => {
           <S.LinksList>
             <h4>
               <S.CateringIcon />
-              {/* <a href="www.placeholder.com">Catering</a> */}
               <Link to='/' className='nav_links'>Catering</Link>
             </h4>
             <S.HR />
@@ -53,7 +48,6 @@ const Header = () => {
           <S.LinksList>
             <h4>
               <S.ContactIcon />
-              {/* <a href="www.placeholder.com">Contact</a> */}
               <Link to='/' className='nav_links'>Contact</Link>
             </h4>
             <S.HR />

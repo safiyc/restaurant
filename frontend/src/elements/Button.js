@@ -10,7 +10,7 @@ const Button = styled.button`
   width: 110px;
   height: 30px;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: black;
 

@@ -5,6 +5,7 @@ import { Normalize } from 'styled-normalize';
 import GlobalStyles from './globalStyles';
 import App from './App';
 import Reserve from './components/Reserve/Reserve'
+// import Reserve from './components/Reserve/TestReserve'
 import * as serviceWorker from './serviceWorker';
 
 const Root = () => (
