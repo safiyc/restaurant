@@ -10,11 +10,12 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font-size: 62.5%; //10px
+    font-size: 62.5%; /* 10px */
   }
 
   body {
-    font-size: 1.6rem; //16px
+    /* font-size 16px */
+    font-size: 1.6rem; 
     height: 100%;
     overflow-y: scroll;
 

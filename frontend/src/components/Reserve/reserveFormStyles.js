@@ -20,7 +20,7 @@ export const Form = styled.form`
   justify-content: space-between;
 
   ${above.med`
-    width: auto;
+    width: 760px;
     flex-direction: row;
     flex-wrap: wrap;
   `};
